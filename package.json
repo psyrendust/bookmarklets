@@ -1,0 +1,27 @@
+{
+  "name": "bookmarklets",
+  "version": "1.0.0",
+  "description": "My collection of bookmarklets",
+  "main": "index.mjs",
+  "repository": "git@github.com:psyrendust/bookmarklets.git",
+  "author": "Larry Gordon <psyrendust@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "node index.mjs && eslint --fix README.md",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.10.0",
+    "eslint": "^9.10.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-markdownlint": "^0.6.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "globals": "^15.9.0",
+    "markdownlint": "^0.35.0",
+    "prettier": "^3.3.3",
+    "terser": "^5.32.0"
+  }
+}

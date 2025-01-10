@@ -29,6 +29,8 @@ function run() {
     { id: 'data-copy' },
     'opacity: 0; position:absolute; top:-1000px; left:0',
   );
+  let wrapper = createEl('div', null, null);
+  let prefix = createEl('span', null, null, ':pr: ');
   let anchor = createEl('a', { href: url });
   let prNode = createEl('span', null, null, 'PR ');
   let sepNode = createEl('span', null, null, ' - ');
@@ -37,13 +39,15 @@ function run() {
   );
 
   titleContainer.appendChild(anchorContainer);
-  anchorContainer.appendChild(anchor);
+  anchorContainer.appendChild(wrapper);
+  wrapper.appendChild(prefix);
+  wrapper.appendChild(anchor);
   console.log('anchor added to dom');
 
   console.log('create selection');
   var selection = window.getSelection();
   var range = document.createRange();
-  range.selectNodeContents(anchor);
+  range.selectNodeContents(wrapper);
   selection.removeAllRanges();
   selection.addRange(range);
   //add to clipboard.

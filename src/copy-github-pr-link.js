@@ -13,7 +13,7 @@ function createEl(type, attributes, style, content) {
 function run() {
   console.log('running program');
   let url = window.location.href;
-  let titleContainer = document.querySelector('h1.gh-header-title');
+  let titleContainer = document.querySelector('h1.gh-header-title') ?? document.querySelector('[data-component="PH_Title"]');
   let [titleNode, numNode] = titleContainer.querySelectorAll('*');
   let anchorContainer = document.querySelector('#data-copy');
 
